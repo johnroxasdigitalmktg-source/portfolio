@@ -1,0 +1,265 @@
+
+<!-- PLAN MODAL -->
+<div id="planModal" onclick="planModalClose()" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,0.88);backdrop-filter:blur(12px);align-items:flex-start;justify-content:center;overflow-y:auto;">
+  <div id="planModalInner" style="position:relative;width:100%;max-width:1400px;min-height:100%;margin:0 auto;" onclick="event.stopPropagation()">
+    <button onclick="planModalClose()" style="position:sticky;top:16px;float:right;margin:16px 16px 0 0;z-index:10;width:38px;height:38px;border-radius:50%;background:#FF6500;border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(255,101,0,0.4)"><i class="bx bx-x"></i></button>
+    <!-- #workflows section is moved here by JS on open -->
+  </div>
+</div>
+
+<!-- WORKFLOWS ILLUSTRATION -->
+<section id="workflows" style="background:#ddddd5;padding:72px 24px 96px;display:none;">
+  <div style="max-width:1280px;margin:0 auto;">
+
+    <!-- Plan Header -->
+    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;margin-bottom:48px;">
+      <div style="text-align:center;margin-bottom:36px;">
+        <p style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6500;margin-bottom:6px;">Real Estate GHL System</p>
+        <h1 style="font-size:clamp(22px,3vw,32px);font-weight:800;color:#1a1a1a;letter-spacing:-0.02em;">Full Operational Logic &amp; Workflow Build</h1>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1100px;margin:0 auto;">
+
+        <!-- Pipeline Architecture -->
+        <div style="background:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 1px 4px rgba(0,0,0,0.08),0 4px 16px rgba(0,0,0,0.07);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6500;margin-bottom:16px;">Pipeline Architecture</div>
+          <div style="margin-bottom:14px;">
+            <div style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:5px;">Buyer Pipeline</div>
+            <div style="font-size:11px;color:#666;line-height:1.75;">
+              New Lead &rarr; Attempted Contact &rarr; Contacted &rarr; Qualified<br>
+              &rarr; Viewing Scheduled &rarr; Viewing Confirmed &rarr; Viewed Property<br>
+              &rarr; Follow-Up &rarr; Negotiation &rarr; Reservation Made<br>
+              &rarr; <span style="color:#16a34a;font-weight:600;">Closed Won</span> &rarr; <span style="color:#dc2626;font-weight:600;">Closed Lost</span>
+            </div>
+          </div>
+          <div style="height:1px;background:rgba(0,0,0,0.07);margin:14px 0;"></div>
+          <div style="margin-bottom:14px;">
+            <div style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:5px;">Seller Pipeline</div>
+            <div style="font-size:11px;color:#666;line-height:1.75;">
+              New Lead &rarr; Contacted &rarr; Property Evaluation Scheduled<br>
+              &rarr; Evaluation Completed &rarr; Listing Agreement Signed<br>
+              &rarr; Property Listed &rarr; Offer Received &rarr; Under Contract<br>
+              &rarr; <span style="color:#16a34a;font-weight:600;">Closed Won</span> &rarr; <span style="color:#dc2626;font-weight:600;">Closed Lost</span>
+            </div>
+          </div>
+          <div style="height:1px;background:rgba(0,0,0,0.07);margin:14px 0;"></div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:#1a1a1a;margin-bottom:5px;">No-Show Recovery Pipeline</div>
+            <div style="font-size:11px;color:#666;line-height:1.75;">
+              No Show &rarr; Recovery Sequence Active &rarr; Rebooked &rarr; <span style="color:#dc2626;font-weight:600;">Closed Lost</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tag Architecture -->
+        <div style="background:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 1px 4px rgba(0,0,0,0.08),0 4px 16px rgba(0,0,0,0.07);">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6500;margin-bottom:16px;">Tag Architecture</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Source Tags</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">FB Lead Ad</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Instagram Ad</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Google Search</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Lamudi</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Property24</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Referral</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Open House</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Type Tags</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                <span style="font-size:10px;background:rgba(255,101,0,0.1);color:#FF6500;padding:3px 8px;border-radius:6px;font-weight:600;">Buyer</span>
+                <span style="font-size:10px;background:rgba(255,101,0,0.1);color:#FF6500;padding:3px 8px;border-radius:6px;font-weight:600;">Seller</span>
+                <span style="font-size:10px;background:rgba(255,101,0,0.1);color:#FF6500;padding:3px 8px;border-radius:6px;font-weight:600;">Investor</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Timeline Tags</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                <span style="font-size:10px;background:rgba(239,68,68,0.1);color:#dc2626;padding:3px 8px;border-radius:6px;font-weight:600;">Hot &mdash; 0-30 Days</span>
+                <span style="font-size:10px;background:rgba(245,158,11,0.1);color:#d97706;padding:3px 8px;border-radius:6px;font-weight:600;">Warm &mdash; 1-6 Months</span>
+                <span style="font-size:10px;background:rgba(99,102,241,0.1);color:#4f46e5;padding:3px 8px;border-radius:6px;font-weight:600;">Cold &mdash; 6+ Months</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Property Tags</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Budget Range</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Area</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Property Type</span>
+                <span style="font-size:10px;background:#f1f5f9;color:#475569;padding:3px 8px;border-radius:6px;font-weight:500;">Financing Method</span>
+              </div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Status Tags</div>
+              <div style="display:flex;flex-wrap:wrap;gap:5px;">
+                <span style="font-size:10px;background:rgba(239,68,68,0.1);color:#dc2626;padding:3px 8px;border-radius:6px;font-weight:600;">No Show</span>
+                <span style="font-size:10px;background:rgba(245,158,11,0.1);color:#d97706;padding:3px 8px;border-radius:6px;font-weight:600;">Inactive 90 Days</span>
+                <span style="font-size:10px;background:rgba(15,157,88,0.1);color:#0F9D58;padding:3px 8px;border-radius:6px;font-weight:600;">Referral Given</span>
+                <span style="font-size:10px;background:rgba(59,130,246,0.1);color:#2563eb;padding:3px 8px;border-radius:6px;font-weight:600;">Review Requested</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Heading -->
+    <div style="text-align:center;margin-bottom:32px;">
+      <p style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6500;margin-bottom:8px;">Automation Blueprints</p>
+      <h2 style="font-size:28px;font-weight:800;color:#1a1a1a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">Six workflows. One system.</h2>
+    </div>
+
+    <!-- 3x2 Grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+    <!-- WF01 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.11),0 4px 8px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.13);">
+      <div style="height:36px;background:linear-gradient(to bottom,#f0f0ee,#e8e8e5);border-bottom:1px solid rgba(0,0,0,0.12);display:flex;align-items:center;padding:0 14px;gap:6px;position:relative;user-select:none;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:600;color:#444;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 90px);">WF1 &mdash; Lead Capture &amp; Instant Response</div>
+      </div>
+      <div style="background:#f8f8f4;background-image:radial-gradient(circle,rgba(0,0,0,0.065) 1px,transparent 1px);background-size:20px 20px;padding:20px 20px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+        <div id="wf01-flow" style="display:flex;flex-direction:column;align-items:center;">
+          <div id="wf01-n1" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#FF6500;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-bolt-circle' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Form Submitted</div><div style="font-size:10.5px;color:#aaa;">Buyer or Seller inquiry received</div></div>
+            <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;background:rgba(255,101,0,0.1);color:#FF6500;text-transform:uppercase;white-space:nowrap;">Trigger</span>
+          </div>
+          <div id="wf01-c1" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf01-n2" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#3B82F6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-user-plus' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Contact Created &amp; Tagged</div><div style="font-size:10.5px;color:#aaa;">FB &middot; Instagram &middot; Google &middot; Lamudi &middot; Property24 &middot; Referral</div></div>
+          </div>
+          <div id="wf01-c2" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf01-n3" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#7C3AED;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-purchase-tag' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Tagged by Type &rarr; Pipeline Assigned</div><div style="font-size:10.5px;color:#aaa;">Buyer or Seller &middot; Stage set to "New Lead"</div></div>
+          </div>
+          <div id="wf01-c3" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf01-n4" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Instant WhatsApp Sent</div><div style="font-size:10.5px;color:#aaa;">"Hi {{first_name}}, a specialist will contact you shortly"</div></div>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(37,211,102,0.12);color:#1aaa5e;white-space:nowrap;">&lt;60s</span>
+          </div>
+          <div id="wf01-c4" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf01-n5" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#4285F4;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-envelope' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Email Confirmation Sent</div><div style="font-size:10.5px;color:#aaa;">Lead receives inquiry acknowledgment instantly</div></div>
+          </div>
+          <div id="wf01-c5" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf01-n6" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-git-branch' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Round-Robin Assignment</div><div style="font-size:10.5px;color:#aaa;">Agent assigned &middot; SMS + GHL task &middot; "Contact within 5 min"</div></div>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(15,157,88,0.1);color:#0F9D58;white-space:nowrap;">Auto</span>
+          </div>
+          <div id="wf01-c6" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf01-n7" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time-five' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">If/Else &mdash; 15-Minute Check</div><div style="font-size:10.5px;color:#aaa;">Did the agent update the pipeline stage?</div></div>
+          </div>
+          <div id="wf01-branch" style="display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="wf01-bstem" style="width:2px;height:14px;background:#FF6500;transition:opacity .3s;"></div>
+            <svg id="wf01-bsvg" width="100%" height="16" viewBox="0 0 280 16" preserveAspectRatio="none" style="overflow:visible;display:block;">
+              <line x1="140" y1="0" x2="140" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="234" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="46" y2="32" stroke="#FF6500" stroke-width="2"/>
+              <line x1="234" y1="16" x2="234" y2="32" stroke="#FF6500" stroke-width="2"/>
+            </svg>
+            <div style="display:flex;gap:8px;justify-content:center;width:100%;margin-top:16px;">
+              <div id="wf01-ok" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-check-circle' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Stage Updated</div><div style="font-size:10px;color:#bbb;">Lead continues in pipeline</div></div>
+              </div>
+              <div id="wf01-ng" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#EF4444;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">No Update &mdash; Reassign</div><div style="font-size:10px;color:#bbb;">Next agent notified</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-cog' style="color:#FF6500;font-size:12px"></i>GHL CRM</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bxl-whatsapp' style="color:#25D366;font-size:12px"></i>WhatsApp</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-envelope' style="color:#4285F4;font-size:12px"></i>Email &amp; SMS</div>
+        </div>
+      </div>
+    </div><!-- /W1 -->
+
+    <!-- WF02 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.11),0 4px 8px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.13);">
+      <div style="height:36px;background:linear-gradient(to bottom,#f0f0ee,#e8e8e5);border-bottom:1px solid rgba(0,0,0,0.12);display:flex;align-items:center;padding:0 14px;gap:6px;position:relative;user-select:none;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:600;color:#444;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 90px);">WF2 &mdash; Qualification &amp; Lead Scoring</div>
+      </div>
+      <div style="background:#f8f8f4;background-image:radial-gradient(circle,rgba(0,0,0,0.065) 1px,transparent 1px);background-size:20px 20px;padding:20px 20px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+        <div id="wf02-flow" style="display:flex;flex-direction:column;align-items:center;">
+          <div id="wf02-n1" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-shuffle' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Stage Moved to "Contacted"</div><div style="font-size:10.5px;color:#aaa;">Trigger fires on pipeline stage change</div></div>
+            <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;background:rgba(255,101,0,0.1);color:#FF6500;text-transform:uppercase;white-space:nowrap;">Trigger</span>
+          </div>
+          <div id="wf02-c1" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf02-n2" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Qualification Form Sent</div><div style="font-size:10.5px;color:#aaa;">WhatsApp &middot; Email &middot; Buyer &amp; seller versions</div></div>
+          </div>
+          <div id="wf02-c2" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf02-n3" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#7C3AED;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-purchase-tag' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Tags Auto-Applied</div><div style="font-size:10.5px;color:#aaa;">Property Type &middot; Budget Range &middot; Buyer &amp; Seller roles</div></div>
+          </div>
+          <div id="wf02-c3" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf02-n4" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-bar-chart-alt-2' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Lead Scored Automatically</div><div style="font-size:10.5px;color:#aaa;">Score 1&ndash;10 by tag combination</div></div>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(15,157,88,0.1);color:#0F9D58;white-space:nowrap;">Auto</span>
+          </div>
+          <div id="wf02-c4" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf02-n5" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-shuffle' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Stage &rarr; "Qualified"</div><div style="font-size:10.5px;color:#aaa;">Pipeline updated automatically</div></div>
+          </div>
+          <div id="wf02-c5" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf02-n6" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#3B82F6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-task' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Agent Task Created</div><div style="font-size:10.5px;color:#aaa;">Review, assess &amp; recommend properties</div></div>
+          </div>
+          <div id="wf02-c6" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf02-n7" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time-five' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">If/Else &mdash; 24h Check</div><div style="font-size:10.5px;color:#aaa;">Was the qualification form filled?</div></div>
+          </div>
+          <div id="wf02-branch" style="display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="wf02-bstem" style="width:2px;height:14px;background:#FF6500;transition:opacity .3s;"></div>
+            <svg id="wf02-bsvg" width="100%" height="16" viewBox="0 0 280 16" preserveAspectRatio="none" style="overflow:visible;display:block;">
+              <line x1="140" y1="0" x2="140" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="234" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="46" y2="32" stroke="#FF6500" stroke-width="2"/>
+              <line x1="234" y1="16" x2="234" y2="32" stroke="#FF6500" stroke-width="2"/>
+            </svg>
+            <div style="display:flex;gap:8px;justify-content:center;width:100%;margin-top:16px;">
+              <div id="wf02-ok" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-check-circle' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Form Received</div><div style="font-size:10px;color:#bbb;">Lead moves forward</div></div>
+              </div>
+              <div id="wf02-ng" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Follow-up Sent</div><div style="font-size:10px;color:#bbb;">Re-sends form in 24h</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-cog' style="color:#FF6500;font-size:12px"></i>GHL CRM</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bxl-whatsapp' style="color:#25D366;font-size:12px"></i>WhatsApp</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-bar-chart-alt-2' style="color:#F59E0B;font-size:12px"></i>Lead Scoring</div>
+        </div>
+      </div>
+    </div><!-- /W2 -->

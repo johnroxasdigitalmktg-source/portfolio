@@ -1,0 +1,393 @@
+
+    <!-- WF03 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.11),0 4px 8px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.13);">
+      <div style="height:36px;background:linear-gradient(to bottom,#f0f0ee,#e8e8e5);border-bottom:1px solid rgba(0,0,0,0.12);display:flex;align-items:center;padding:0 14px;gap:6px;position:relative;user-select:none;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:600;color:#444;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 90px);">WF3 &mdash; Appointment Booking, Confirmation &amp; Reminder</div>
+      </div>
+      <div style="background:#f8f8f4;background-image:radial-gradient(circle,rgba(0,0,0,0.065) 1px,transparent 1px);background-size:20px 20px;padding:20px 20px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+        <div id="wf03-flow" style="display:flex;flex-direction:column;align-items:center;">
+          <div id="wf03-n1" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#FF6500;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-calendar' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Booking Made via GHL Calendar</div><div style="font-size:10.5px;color:#aaa;">Trigger fires immediately on booking</div></div>
+            <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;background:rgba(255,101,0,0.1);color:#FF6500;text-transform:uppercase;white-space:nowrap;">Trigger</span>
+          </div>
+          <div id="wf03-c1" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf03-n2" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-shuffle' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Stage &rarr; "Viewing Scheduled"</div><div style="font-size:10.5px;color:#aaa;">Pipeline updated immediately</div></div>
+          </div>
+          <div id="wf03-c2" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf03-n3" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">WhatsApp Confirmation Sent</div><div style="font-size:10.5px;color:#aaa;">Address &middot; Map &middot; Agent &middot; Photos &middot; Options</div></div>
+          </div>
+          <div id="wf03-c3" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf03-n4" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#4285F4;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-calendar-check' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Email + Google Calendar Invite</div><div style="font-size:10.5px;color:#aaa;">Sent to lead + agent simultaneously</div></div>
+          </div>
+          <div id="wf03-c4" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf03-n5" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#3B82F6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-bell' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Agent Notified</div><div style="font-size:10.5px;color:#aaa;">"Viewing booked: {{first_name}} &mdash; {{time}}"</div></div>
+          </div>
+          <div id="wf03-c5" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf03-n6" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-alarm' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">24h Before &mdash; WhatsApp + Email</div><div style="font-size:10.5px;color:#aaa;">Address, map link, time reminder</div></div>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(245,158,11,0.12);color:#d97706;white-space:nowrap;">24h</span>
+          </div>
+          <div id="wf03-c6" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf03-n7" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time-five' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">If/Else &mdash; Confirmation received?</div><div style="font-size:10.5px;color:#aaa;">Stage &rarr; "Viewing Confirmed"?</div></div>
+          </div>
+          <div id="wf03-branch" style="display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="wf03-bstem" style="width:2px;height:14px;background:#FF6500;transition:opacity .3s;"></div>
+            <svg id="wf03-bsvg" width="100%" height="16" viewBox="0 0 280 16" preserveAspectRatio="none" style="overflow:visible;display:block;">
+              <line x1="140" y1="0" x2="140" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="234" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="46" y2="32" stroke="#FF6500" stroke-width="2"/>
+              <line x1="234" y1="16" x2="234" y2="32" stroke="#FF6500" stroke-width="2"/>
+            </svg>
+            <div style="display:flex;gap:8px;justify-content:center;width:100%;margin-top:16px;">
+              <div id="wf03-ok" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-check-circle' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">3h + 1h Reminders</div><div style="font-size:10px;color:#bbb;">SMS + WhatsApp alerts</div></div>
+              </div>
+              <div id="wf03-ng" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#EF4444;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-phone-call' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Agent: Call Lead</div><div style="font-size:10px;color:#bbb;">Confirm attendance</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-calendar-check' style="color:#4285F4;font-size:12px"></i>Google Cal</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bxl-whatsapp' style="color:#25D366;font-size:12px"></i>WhatsApp</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-envelope' style="color:#FF6500;font-size:12px"></i>Email + SMS</div>
+        </div>
+      </div>
+    </div><!-- /W3 -->
+
+    <!-- WF04 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.11),0 4px 8px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.13);">
+      <div style="height:36px;background:linear-gradient(to bottom,#f0f0ee,#e8e8e5);border-bottom:1px solid rgba(0,0,0,0.12);display:flex;align-items:center;padding:0 14px;gap:6px;position:relative;user-select:none;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:600;color:#444;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 90px);">WF4 &mdash; No-Show Detection &amp; Recovery</div>
+      </div>
+      <div style="background:#f8f8f4;background-image:radial-gradient(circle,rgba(0,0,0,0.065) 1px,transparent 1px);background-size:20px 20px;padding:20px 20px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+        <div id="wf04-flow" style="display:flex;flex-direction:column;align-items:center;">
+          <div id="wf04-n1" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#EF4444;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-x-circle' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Marked "No Show"</div><div style="font-size:10.5px;color:#aaa;">Appointment status or stage changed</div></div>
+            <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;background:rgba(239,68,68,0.1);color:#EF4444;text-transform:uppercase;white-space:nowrap;">Trigger</span>
+          </div>
+          <div id="wf04-c1" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf04-n2" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#7C3AED;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-purchase-tag' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Stage + Tag Applied</div><div style="font-size:10.5px;color:#aaa;">Stage: No Show Recovery &middot; Tag: No Show</div></div>
+          </div>
+          <div id="wf04-c2" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf04-n3" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Friendly WhatsApp Sent</div><div style="font-size:10.5px;color:#aaa;">"Sorry we missed you &mdash; want to reschedule?"</div></div>
+            <span style="font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;background:rgba(37,211,102,0.12);color:#1aaa5e;white-space:nowrap;">&lt;30m</span>
+          </div>
+          <div id="wf04-c3" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf04-n4" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#4285F4;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-envelope' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">24h &mdash; Rebook Invitation</div><div style="font-size:10.5px;color:#aaa;">WhatsApp + Email with calendar link</div></div>
+          </div>
+          <div id="wf04-c4" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf04-n5" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#6366F1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-calendar' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 3 &mdash; New Slots WhatsApp</div><div style="font-size:10.5px;color:#aaa;">"Available slots this week?"</div></div>
+          </div>
+          <div id="wf04-c5" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf04-n6" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-home' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 7 &mdash; Matching Properties Email</div><div style="font-size:10.5px;color:#aaa;">"3 properties you might love"</div></div>
+          </div>
+          <div id="wf04-c6" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf04-n7" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time-five' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">14 Days &mdash; If/Else: Any response?</div><div style="font-size:10.5px;color:#aaa;">Did lead re-engage?</div></div>
+          </div>
+          <div id="wf04-branch" style="display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="wf04-bstem" style="width:2px;height:14px;background:#FF6500;transition:opacity .3s;"></div>
+            <svg id="wf04-bsvg" width="100%" height="16" viewBox="0 0 280 16" preserveAspectRatio="none" style="overflow:visible;display:block;">
+              <line x1="140" y1="0" x2="140" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="234" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="46" y2="32" stroke="#FF6500" stroke-width="2"/>
+              <line x1="234" y1="16" x2="234" y2="32" stroke="#FF6500" stroke-width="2"/>
+            </svg>
+            <div style="display:flex;gap:8px;justify-content:center;width:100%;margin-top:16px;">
+              <div id="wf04-ok" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-check-circle' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Re-Engaged</div><div style="font-size:10px;color:#bbb;">Back to pipeline</div></div>
+              </div>
+              <div id="wf04-ng" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#7C3AED;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">180-Day Nurture</div><div style="font-size:10px;color:#bbb;">Inactive tag applied</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bxl-whatsapp' style="color:#25D366;font-size:12px"></i>WhatsApp</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-envelope' style="color:#4285F4;font-size:12px"></i>Email</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-purchase-tag' style="color:#7C3AED;font-size:12px"></i>Smart Tags</div>
+        </div>
+      </div>
+    </div><!-- /W4 -->
+
+    <!-- WF05 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.11),0 4px 8px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.13);">
+      <div style="height:36px;background:linear-gradient(to bottom,#f0f0ee,#e8e8e5);border-bottom:1px solid rgba(0,0,0,0.12);display:flex;align-items:center;padding:0 14px;gap:6px;position:relative;user-select:none;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:600;color:#444;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 90px);">WF5 &mdash; Post-Viewing Follow-Up &amp; 180-Day Nurture</div>
+      </div>
+      <div style="background:#f8f8f4;background-image:radial-gradient(circle,rgba(0,0,0,0.065) 1px,transparent 1px);background-size:20px 20px;padding:20px 20px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+        <div id="wf05-flow" style="display:flex;flex-direction:column;align-items:center;">
+          <div id="wf05-n1" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#FF6500;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-show' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Stage &rarr; "Viewed Property"</div><div style="font-size:10.5px;color:#aaa;">Pipeline stage change fires workflow</div></div>
+            <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;background:rgba(255,101,0,0.1);color:#FF6500;text-transform:uppercase;white-space:nowrap;">Trigger</span>
+          </div>
+          <div id="wf05-c1" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf05-n2" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Same Day &mdash; WhatsApp Sent</div><div style="font-size:10.5px;color:#aaa;">"What did you think? Any questions?"</div></div>
+          </div>
+          <div id="wf05-c2" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf05-n3" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#3B82F6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-phone-call' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Agent Task Created</div><div style="font-size:10.5px;color:#aaa;">"Call lead within 2 hours of viewing"</div></div>
+          </div>
+          <div id="wf05-c3" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf05-n4" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#4285F4;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-envelope' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 3 &mdash; Email + WhatsApp</div><div style="font-size:10.5px;color:#aaa;">Similar properties by tags</div></div>
+          </div>
+          <div id="wf05-c4" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf05-n5" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time-five' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 7 &mdash; If/Else (No Decision)</div><div style="font-size:10.5px;color:#aaa;">Stage &rarr; "Follow-Up" if no answer</div></div>
+          </div>
+          <div id="wf05-c5" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf05-n6" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#6366F1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-file' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 14 &mdash; Market Insight Email</div><div style="font-size:10.5px;color:#aaa;">Financing guide by budget tag</div></div>
+          </div>
+          <div id="wf05-c6" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf05-n7" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 30 &mdash; Ongoing Nurture Tracks</div><div style="font-size:10.5px;color:#aaa;">Buyer &middot; Seller &middot; Investor sequences</div></div>
+          </div>
+          <div id="wf05-branch" style="display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="wf05-bstem" style="width:2px;height:14px;background:#FF6500;transition:opacity .3s;"></div>
+            <svg id="wf05-bsvg" width="100%" height="16" viewBox="0 0 280 16" preserveAspectRatio="none" style="overflow:visible;display:block;">
+              <line x1="140" y1="0" x2="140" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="234" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="46" y2="32" stroke="#FF6500" stroke-width="2"/>
+              <line x1="234" y1="16" x2="234" y2="32" stroke="#FF6500" stroke-width="2"/>
+            </svg>
+            <div style="display:flex;gap:8px;justify-content:center;width:100%;margin-top:16px;">
+              <div id="wf05-ok" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-check-circle' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Active Nurture</div><div style="font-size:10px;color:#bbb;">Weekly content track</div></div>
+              </div>
+              <div id="wf05-ng" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#EF4444;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-x' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Closed Lost</div><div style="font-size:10px;color:#bbb;">After 180 days</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bxl-whatsapp' style="color:#25D366;font-size:12px"></i>WhatsApp</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-envelope' style="color:#4285F4;font-size:12px"></i>Email</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-time' style="color:#F59E0B;font-size:12px"></i>180-Day</div>
+        </div>
+      </div>
+    </div><!-- /W5 -->
+
+    <!-- WF06 -->
+    <div style="border-radius:12px;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,0.11),0 4px 8px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.13);">
+      <div style="height:36px;background:linear-gradient(to bottom,#f0f0ee,#e8e8e5);border-bottom:1px solid rgba(0,0,0,0.12);display:flex;align-items:center;padding:0 14px;gap:6px;position:relative;user-select:none;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#FF5F57;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#FEBC2E;"></div>
+        <div style="width:11px;height:11px;border-radius:50%;background:#28C840;"></div>
+        <div style="position:absolute;left:50%;transform:translateX(-50%);font-size:10.5px;font-weight:600;color:#444;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:calc(100% - 90px);">WF6 &mdash; Post-Close: Referral, Review &amp; Re-Engagement</div>
+      </div>
+      <div style="background:#f8f8f4;background-image:radial-gradient(circle,rgba(0,0,0,0.065) 1px,transparent 1px);background-size:20px 20px;padding:20px 20px 24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+        <div id="wf06-flow" style="display:flex;flex-direction:column;align-items:center;">
+          <div id="wf06-n1" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#FF6500;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-trophy' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Stage &rarr; "Closed Won"</div><div style="font-size:10.5px;color:#aaa;">Deal closed &mdash; celebration sequence fires</div></div>
+            <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;padding:2px 7px;border-radius:20px;background:rgba(255,101,0,0.1);color:#FF6500;text-transform:uppercase;white-space:nowrap;">Trigger</span>
+          </div>
+          <div id="wf06-c1" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf06-n2" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bxl-whatsapp' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 1 &mdash; Congrats Message</div><div style="font-size:10.5px;color:#aaa;">WhatsApp + Email + agent personal note</div></div>
+          </div>
+          <div id="wf06-c2" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf06-n3" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#3B82F6;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-bell' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Internal Notification</div><div style="font-size:10.5px;color:#aaa;">Broker + Admin &middot; Commission updated</div></div>
+          </div>
+          <div id="wf06-c3" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf06-n4" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-star' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 7 &mdash; Review Request</div><div style="font-size:10.5px;color:#aaa;">WhatsApp + tag "Review Requested"</div></div>
+          </div>
+          <div id="wf06-c4" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf06-n5" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#6366F1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-share-alt' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 30 &mdash; Referral Ask</div><div style="font-size:10.5px;color:#aaa;">"Know anyone buying or selling?"</div></div>
+          </div>
+          <div id="wf06-c5" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf06-n6" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#4285F4;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-mail-send' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Day 90 + 6-Month Check-ins</div><div style="font-size:10.5px;color:#aaa;">Market updates for their area</div></div>
+          </div>
+          <div id="wf06-c6" style="width:2px;height:14px;background:#FF6500;position:relative;display:flex;align-items:center;justify-content:center;transition:opacity .3s;"><span style="position:absolute;width:16px;height:16px;background:#f8f8f4;border:1.5px solid #FF6500;border-radius:50%;color:#FF6500;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1;">+</span></div>
+          <div id="wf06-n7" style="display:flex;align-items:center;gap:10px;width:100%;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:10px;padding:9px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+            <div style="width:32px;height:32px;border-radius:8px;background:#F59E0B;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time-five' style="font-size:16px;color:white"></i></div>
+            <div style="flex:1;min-width:0;"><div style="font-size:12px;font-weight:600;color:#1a1a1a;margin-bottom:1px;">Every 12 Months &mdash; Anniversary</div><div style="font-size:10.5px;color:#aaa;">Home value update + referral ask reactivated</div></div>
+          </div>
+          <div id="wf06-branch" style="display:flex;flex-direction:column;align-items:center;width:100%;">
+            <div id="wf06-bstem" style="width:2px;height:14px;background:#FF6500;transition:opacity .3s;"></div>
+            <svg id="wf06-bsvg" width="100%" height="16" viewBox="0 0 280 16" preserveAspectRatio="none" style="overflow:visible;display:block;">
+              <line x1="140" y1="0" x2="140" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="234" y2="16" stroke="#FF6500" stroke-width="2"/>
+              <line x1="46" y1="16" x2="46" y2="32" stroke="#FF6500" stroke-width="2"/>
+              <line x1="234" y1="16" x2="234" y2="32" stroke="#FF6500" stroke-width="2"/>
+            </svg>
+            <div style="display:flex;gap:8px;justify-content:center;width:100%;margin-top:16px;">
+              <div id="wf06-ok" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#0F9D58;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-check-circle' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Active Referrer</div><div style="font-size:10px;color:#bbb;">Referral count updated</div></div>
+              </div>
+              <div id="wf06-ng" style="display:flex;align-items:center;gap:8px;flex:1;background:#fff;border:1px solid rgba(0,0,0,0.09);border-radius:9px;padding:8px 10px;box-shadow:0 1px 3px rgba(0,0,0,0.06);transition:border-color .3s,box-shadow .3s,opacity .3s;">
+                <div style="width:26px;height:26px;border-radius:7px;background:#6366F1;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class='bx bx-time' style="font-size:14px;color:white"></i></div>
+                <div><div style="font-size:11px;font-weight:600;color:#1a1a1a;">Long-term Nurture</div><div style="font-size:10px;color:#bbb;">Re-engagement loop</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:6px;justify-content:center;margin-top:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bxl-whatsapp' style="color:#25D366;font-size:12px"></i>WhatsApp</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-star' style="color:#F59E0B;font-size:12px"></i>Reviews</div>
+          <div style="display:flex;align-items:center;gap:5px;padding:5px 10px;background:white;border:1px solid rgba(0,0,0,0.1);border-radius:999px;font-size:10.5px;font-weight:500;color:#666;"><i class='bx bx-share-alt' style="color:#6366F1;font-size:12px"></i>Referrals</div>
+        </div>
+      </div>
+    </div><!-- /W6 -->
+
+    </div><!-- /grid -->
+  </div><!-- /max-width -->
+</section>
+
+<script>
+(function () {
+  var NODE_MS   = 850;
+  var CONN_MS   = 370;
+  var PAUSE_MS  = 1600;
+  var PREFIXES  = ['wf01','wf02','wf03','wf04','wf05','wf06'];
+  var lastIdx   = -1;
+
+  function g(id) { return document.getElementById(id); }
+
+  function setNodeStyle(id, state) {
+    var el = g(id); if (!el) return;
+    if (state === 'idle') {
+      el.style.opacity     = '0.4';
+      el.style.borderColor = 'rgba(0,0,0,0.09)';
+      el.style.boxShadow   = '0 1px 3px rgba(0,0,0,0.06)';
+    } else if (state === 'active') {
+      el.style.opacity     = '1';
+      el.style.borderColor = '#FF6500';
+      el.style.boxShadow   = '0 0 0 2px rgba(255,101,0,0.28),0 0 14px rgba(255,101,0,0.18),0 1px 3px rgba(0,0,0,0.06)';
+    } else {
+      el.style.opacity     = '1';
+      el.style.borderColor = 'rgba(34,197,94,0.55)';
+      el.style.boxShadow   = '0 0 0 1px rgba(34,197,94,0.18),0 1px 3px rgba(0,0,0,0.06)';
+    }
+  }
+
+  function setConnStyle(id, state) {
+    var el = g(id); if (!el) return;
+    el.style.opacity = (state === 'idle') ? '0.22' : '1';
+  }
+
+  function setSvgStyle(id, state) {
+    var el = g(id); if (!el) return;
+    var col = state === 'idle' ? 'rgba(0,0,0,0.15)' : state === 'active' ? '#FF6500' : '#22c55e';
+    var lines = el.querySelectorAll('line');
+    for (var l = 0; l < lines.length; l++) lines[l].setAttribute('stroke', col);
+  }
+
+  function applyState(step, state) {
+    if      (step.kind === 'node') setNodeStyle(step.id, state);
+    else if (step.kind === 'conn') setConnStyle(step.id, state);
+    else                           setSvgStyle(step.id, state);
+  }
+
+  function buildSteps(p) {
+    var s = [];
+    for (var i = 1; i <= 7; i++) {
+      s.push({id: p+'-n'+i, kind:'node'});
+      if (i < 7) s.push({id: p+'-c'+i, kind:'conn'});
+    }
+    s.push({id: p+'-bstem', kind:'conn'});
+    s.push({id: p+'-bsvg',  kind:'svg' });
+    s.push({id: p+'-ok',    kind:'node'});
+    return s;
+  }
+
+  function runWorkflow(prefix, onDone) {
+    var STEPS = buildSteps(prefix);
+    var idx   = 0;
+    STEPS.forEach(function(s){ applyState(s, 'idle'); });
+    setNodeStyle(prefix+'-ng', 'idle');
+    function tick() {
+      if (idx > 0) applyState(STEPS[idx-1], 'done');
+      var step = STEPS[idx];
+      applyState(step, 'active');
+      idx++;
+      var delay = (step.kind === 'node') ? NODE_MS : CONN_MS;
+      if (idx < STEPS.length) {
+        setTimeout(tick, delay);
+      } else {
+        setTimeout(function(){
+          applyState(STEPS[STEPS.length-1], 'done');
+          setTimeout(onDone, PAUSE_MS);
+        }, delay);
+      }
+    }
+    tick();
+  }
+
+  function runNext() {
+    var idx;
+    do { idx = Math.floor(Math.random() * PREFIXES.length); } while (idx === lastIdx && PREFIXES.length > 1);
+    lastIdx = idx;
+    runWorkflow(PREFIXES[idx], runNext);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function(){ setTimeout(runNext, 600); });
+  } else {
+    setTimeout(runNext, 600);
+  }
+})();
+</script>
