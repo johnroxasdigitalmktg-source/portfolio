@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Site Teardown — QADG Motfware</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:32px;color:#111}
+    h1{font-size:24px}
+    h2{font-size:18px;margin-top:18px}
+    pre{background:#f6f8fa;padding:12px;border-radius:6px;overflow:auto}
+    ul{margin:8px 0 16px 20px}
+    .note{background:#fff8c6;padding:10px;border-radius:6px}
+  </style>
+</head>
+<body>
+  <h1>Site Teardown — QADG Motfware (initial)</h1>
+  <p>Scope: public-facing pages reachable without authentication. This is an initial inspection focused on injection risks (XSS/SQLi/command injection) and recommended protections.</p>
+
+  <h2>What I inspected</h2>
+  <ul>
+    <li>Homepage: https://qadg.motfware.com/ (content, links, visible controls)</li>
+    <li>`robots.txt` (allowed crawling)</li>
+    <li>OAuth entry point: `/auth/google` (redirect to Google)</li>
+  </ul>
+
+  <h2>Initial findings (evidence)</h2>
+  <ul>
+    <li>Homepage contains login/register prompts and language selector — obvious input touchpoints (login form, create account flow).</li>
+    <li>OAuth via Google visible; OAuth endpoints may still accept redirect_uri and state parameters — validate these.</li>
+    <li>No public sitemap discovered via `/sitemap.xml` (or fetch failed) — ability to discover all endpoints may be limited.</li>
+  </ul>
+
+  <h2>Likely injection vectors</h2>
+  <ul>
+    <li>Reflected XSS via query parameters used in UI (language selector, return URLs, error messages).</li>
+    <li>Stored XSS in user-editable fields (profile, referral comments, ambassador program descriptions).</li>
+    <li>SQL injection where backend frameworks or raw queries accept user input without parameterization (registration/login flows).</li>
+    <li>OAuth open redirect if `redirect_uri` is not strictly validated.</li>
+  </ul>
+
+  <h2>Immediate protections to implement (high priority)</h2>
+  <ul>
+    <li>Server-side input validation: validate type, length, allowed character sets for every parameter.</li>
+    <li>Use parameterized queries / prepared statements for all database access. Replace string interpolation in SQL with bound parameters.</li>
+    <li>Context-aware output encoding: HTML-encode data written into HTML, attribute-encode values in attributes, JS-encode values inserted into scripts, URL-encode in URLs.</li>
+    <li>Strong Content-Security-Policy (CSP): block inline scripts/styles by default, use hashes or nonces for allowed inline code. Example header: <pre>Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-...'; object-src 'none'; base-uri 'self';</pre></li>
+    <li>HTTP-only, Secure, SameSite=strict cookies for session cookies; set short lifetimes for sensitive tokens and rotate tokens on privilege changes.</li>
+    <li>Validate OAuth redirect URIs against an allow-list; reject open redirects and unregistered redirect_uris.</li>
+    <li>Sanitize rich text / HTML input with a whitelist sanitizer (DOMPurify, Bleach, etc.) when storing HTML from users.</li>
+  </ul>
+
+  <h2>Secondary protections (medium priority)</h2>
+  <ul>
+    <li>Use an ORM or query builder to avoid hand-rolled SQL where possible.</li>
+    <li>Apply output encoding libraries provided by your web framework / template engine rather than manual string concatenation.</li>
+    <li>Rate-limit authentication endpoints and add account lockout thresholds to slow brute-force and automated injection attempts.</li>
+    <li>Enable CSP reporting endpoint (report-uri/report-to) during rollout to learn about blocked attempts.</li>
+    <li>Implement WAF rules for common SQLi/XSS patterns (as a short-term mitigation).</li>
+  </ul>
+
+  <h2>Testing & verification checklist</h2>
+  <ul>
+    <li>Run automated scanners: OWASP ZAP, Burp Suite (active scan) focused on XSS/SQLi.</li>
+    <li>Fuzz form inputs and parameters (return_url, lang, error) to detect reflections without encoding.</li>
+    <li>Verify prepared statements by auditing code paths for string concatenation into SQL.</li>
+    <li>Use browser devtools to check CSP and cookie flags; verify no inline scripts execute without nonce/hash.</li>
+  </ul>
+
+  <h2>Quick examples</h2>
+  <h3>Parameterized query (Node.js / pg)</h3>
+  <pre>const sql = 'SELECT id FROM users WHERE email = $1';
+const res = await db.query(sql, [email]);</pre>
+
+  <h3>Context-aware encoding (server-side templates)</h3>
+  <pre>// Instead of: &lt;div&gt;&lt;%= userInput %&gt;&lt;/div&gt;
+// Use the template engine's escape function to encode HTML
+&lt;div&gt;&lt;%= escape(userInput) %&gt;&lt;/div&gt;
+  </pre>
+
+  <h2>Next steps I can take</h2>
+  <ul>
+    <li>Crawl the site more thoroughly to enumerate endpoints and forms (requires following links and handling redirects).</li>
+    <li>Run targeted XSS/SQLi tests against identified forms and parameters (requires permission to test actively).</li>
+    <li>Create a prioritized remediation list mapped to code locations (if you provide the code/repo or grant testing permission).</li>
+  </ul>
+
+  <div class="note">If you want active testing (fuzzing/scanning), confirm you have permission to test this domain. I can proceed with passive discovery without permission.</div>
+</body>
+</html>
