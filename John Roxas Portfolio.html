@@ -2888,39 +2888,7 @@
       </div>
 
       <div class="reveal-right" style="transition-delay:.15s">
-        <div id="bookingContainer" style="width:100%;border-radius:14px;box-shadow:0 0 60px rgba(0,191,255,0.18),0 0 120px rgba(0,191,255,0.08);overflow:hidden;background:#011424;min-height:560px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;padding:40px 20px;text-align:center">
-          <div style="font-size:48px;color:#00BFFF"><i class="bx bx-calendar-check"></i></div>
-          <h3 style="font-size:24px;font-weight:800;color:#fff;margin:0;font-family:var(--font-head)">Book Your Free 30-Min Call</h3>
-          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.6;margin:0;max-width:380px">Tell me what's broken. I'll tell you if I can fix it.</p>
-          <button onclick="openBookingModal()" style="display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:10px;background:#00BFFF;color:#000;font-weight:800;text-decoration:none;font-size:15px;box-shadow:0 8px 28px rgba(0,191,255,0.35);transition:all 0.2s;cursor:pointer;font-family:var(--font-head);letter-spacing:0.02em;border:none">
-            <i class="bx bx-calendar" style="font-size:20px"></i>
-            Schedule Now
-          </button>
-        </div>
-        
-        <div id="bookingModal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.8);z-index:9999;align-items:center;justify-content:center;padding:20px">
-          <div style="width:100%;max-width:600px;max-height:90vh;background:#011424;border-radius:14px;box-shadow:0 0 60px rgba(0,191,255,0.18),0 0 120px rgba(0,191,255,0.08);display:flex;flex-direction:column;overflow:hidden">
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid rgba(0,191,255,0.2)">
-              <h3 style="margin:0;color:#fff;font-family:var(--font-head)">Book a Call</h3>
-              <button onclick="closeBookingModal()" style="background:none;border:none;font-size:24px;color:#00BFFF;cursor:pointer;padding:0;width:32px;height:32px;display:flex;align-items:center;justify-content:center">&times;</button>
-            </div>
-            <iframe id="bookingIframe" src="https://api.leadconnectorhq.com/widget/booking/QpiW4DLOqLetY09ioHYg?backgroundColor=%23011424&primaryColor=%2300BFFF&buttonText=Schedule+Meeting&showCalendarTitle=true&showCalendarDescription=true" style="width:100%;height:100%;border:none;flex:1" title="Book a call"></iframe>
-          </div>
-        </div>
-
-        <script>
-          function openBookingModal(){
-            document.getElementById('bookingModal').style.display='flex';
-            document.body.style.overflow='hidden';
-          }
-          function closeBookingModal(){
-            document.getElementById('bookingModal').style.display='none';
-            document.body.style.overflow='auto';
-          }
-          document.getElementById('bookingModal').addEventListener('click', function(e){
-            if(e.target === this) closeBookingModal();
-          });
-        </script>
+        <iframe id="calendarFrame" src="https://api.leadconnectorhq.com/widget/booking/QpiW4DLOqLetY09ioHYg?backgroundColor=%23011424&primaryColor=%2300BFFF&buttonText=Schedule+Meeting&showCalendarTitle=true&showCalendarDescription=true" style="width:100%;height:720px;border:none;border-radius:14px;box-shadow:0 0 60px rgba(0,191,255,0.18),0 0 120px rgba(0,191,255,0.08);display:block" loading="lazy" title="Book a call"></iframe>
       </div>
     </div>
   </div>
