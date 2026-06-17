@@ -2887,37 +2887,17 @@
         </div>
       </div>
 
-      <div class="reveal-right" style="transition-delay:.15s">
-        <iframe id="calendarFrame" src="https://api.leadconnectorhq.com/widget/booking/QpiW4DLOqLetY09ioHYg?backgroundColor=%23011424&primaryColor=%2300BFFF&buttonText=Schedule+Meeting&showCalendarTitle=true&showCalendarDescription=true" style="width:100%;height:720px;border:none;border-radius:14px;box-shadow:0 0 60px rgba(0,191,255,0.18),0 0 120px rgba(0,191,255,0.08);" loading="lazy" title="Book a call"></iframe>
-        <div id="calendarStatus" style="margin-top:12px;color:rgba(255,255,255,0.75);font-size:13px">Loading booking widget…</div>
-        <div id="calendarFallback" style="margin-top:8px;display:none">
-          <a id="calendarOpenNew" href="https://api.leadconnectorhq.com/widget/booking/QpiW4DLOqLetY09ioHYg" target="_blank" rel="noopener" style="display:inline-block;padding:10px 14px;border-radius:8px;background:#00BFFF;color:#000;font-weight:700;text-decoration:none">Open booking in new tab</a>
-          <span style="margin-left:10px;color:rgba(255,255,255,0.6)">If the widget fails to load, use the link above.</span>
+      <div class="reveal-right" style="transition-delay:.15s;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:20px;min-height:560px">
+        <div style="font-size:48px;color:#00BFFF;margin-bottom:10px"><i class="bx bx-calendar-check"></i></div>
+        <div>
+          <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;font-family:var(--font-head)">Book Your Free 30-Min Call</h3>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:16px;max-width:380px">Tell me what's broken. I'll tell you if I can fix it.</p>
         </div>
-        <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
-        <script>
-          (function(){
-            var f = document.getElementById('calendarFrame');
-            var status = document.getElementById('calendarStatus');
-            var fallback = document.getElementById('calendarFallback');
-            var timer = setTimeout(function(){
-              status.textContent = 'Booking widget did not load — showing fallback link.';
-              fallback.style.display = 'block';
-            }, 6000);
-
-            f.addEventListener('load', function(){
-              clearTimeout(timer);
-              try{ status.textContent = 'Booking widget loaded.'; }catch(e){}
-              fallback.style.display = 'none';
-            });
-
-            var p = new URLSearchParams(window.location.search);
-            var fields = ['firstName','lastName','phone','email','name'];
-            var extra = '';
-            fields.forEach(function(k){ if(p.get(k)) extra += '&' + k + '=' + encodeURIComponent(p.get(k)); });
-            if(extra && f){ f.src = f.src + extra; document.getElementById('calendarOpenNew').href = f.src; }
-          })();
-        </script>
+        <a href="https://api.leadconnectorhq.com/widget/booking/QpiW4DLOqLetY09ioHYg" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:10px;background:#00BFFF;color:#000;font-weight:800;text-decoration:none;font-size:15px;box-shadow:0 8px 28px rgba(0,191,255,0.35);transition:all 0.2s;cursor:pointer;font-family:var(--font-head);letter-spacing:0.02em">
+          <i class="bx bx-calendar" style="font-size:20px"></i>
+          Schedule Now
+        </a>
+        <p style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:8px">Opens booking calendar in a new tab</p>
       </div>
     </div>
   </div>
